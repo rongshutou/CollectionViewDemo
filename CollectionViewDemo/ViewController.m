@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "CommonViewController.h"
+#import "FlowViewController.h"
 
 @interface ViewController ()
 
@@ -17,6 +19,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    self.navigationItem.title = @"CollectionViewDemo";
+}
+
+- (IBAction)clickCommonBtn:(id)sender {
+    CommonViewController *commonVC = [[CommonViewController alloc] init];
+    [self.navigationController pushViewController:commonVC animated:YES];
+}
+
+- (IBAction)clickFlowBtn:(id)sender {
+    FlowViewController *flowVC = [[FlowViewController alloc] init];
+    [self.navigationController pushViewController:flowVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
